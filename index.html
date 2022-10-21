@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+         body{
+        background:black;
+        color:white;
+    }
+        .card {
+        background-color:black;
+        
+    }
+    h6{
+        color:#3366CC;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="h3 p-3">TV Series</div>
+                        <form class="m-3"> 
+                            <div class="form-row">
+                            </div>
+                        </form>
+                        <table class="table" id="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Channel</th>
+                                    <th>Seasons</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><h6 id="Cyberpunk" onclick="Cyberpunk()">Cyberpunk: Edgerunners</p></td>
+                                    <td>Netflix</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td><h6 id="Vox Machina" onclick="VoxMachina()">La leyenda de Vox Machina</a></td>
+                                    <td>Amazon Prime</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td><h6 id="Pantheon" onclick="Pantheon()">Pantheon</a></td>
+                                    <td>AMC</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4</td>
+                                    <td><h6 id="LadyBug" onclick="LadyBug()">Miraculous: Las aventuras de Ladybug</a></td>
+                                    <td>Netflix</td>
+                                    <td>5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5</td>
+                                    <td><h6 id="Simpsons" onclick="Doh()">The simpsons</a></td>
+                                    <td>Disney+</td>
+                                    <td>34</td>
+                                  </tr>
+                                  <tr>
+                                    <td>6</td>
+                                    <td><h6 id="Arcane" onclick="Arcane()">Arcane</a></td>
+                                    <td>Netflix</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>7</td>
+                                    <td><h6 id="The Owl House" onclick="Owl()">The Owl House</a></td>
+                                    <td>Disney+</td>
+                                    <td>3</td>
+                                  </tr>
+                                  <tr>
+                                    <td>8</td>
+                                    <td><h6 id="DOTA" onclick="DOTA()">DOTA: Sangre de dragón</a></td>
+                                    <td>Netflix+</td>
+                                    <td>3</td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                        <div class="row justify-content-end">
+                            <h5 class="col-4"><strong>Average Seaons:</strong></h5>
+                            <h5 class="col-4" id="1"><strong></strong></h5>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col border">
+                <div class="h3 p-3"></div>
+                <div class="card" id="card1">
+                    <img class="card-img-top" id="fluid"> </img>
+                    <img src="series.jpg" id="imagen"> </img> 
+                    <div class="card-body">
+                      <h5 class="card-title" id="tituloCard">TV Series</h5>
+                      <p class="card-text" id="texto">Para ver la descripción de las series dar click en sus nombres</p>
+                      <a href="#" class="card-link" id="link"></a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./scripts/course.js" ></script>
+    <script type="module" src="./scripts/dataCourses.js" ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script>
+        function Cyberpunk(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="CyberPunk"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","cyberpunk.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Un joven huérfano se ve obligado a convertirse en un mercenario mientras intenta sobrevivir en una distópica ciudad obsesionada con la tecnología y "+
+            "las modificaciones corporales."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.netflix.com/co/title/81054853");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Ver Cyberpunk de Netflix"
+        }
+    </script>
+    <script>
+        function VoxMachina(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Leyenda de Vox Machina"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","vox_machina.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Vox Machina, una banda de ocho inadaptados sociales, "+
+            "se encuentra en una misión para salvar el reino de Exandria de las fuerzas mágicas oscuras."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.primevideo.com/detail/0O1MH4HMS00EO6XP75LWG5TB89/ref=atv_dp_amz_c_UTPsmN_1_4?language=es_ES");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Ver Vox Machina de Amazon Prime"
+        }
+    </script>
+    <script>
+        function Pantheon(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Pantheon"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","pantheon.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Pantheon es una serie de televisión dramática de ciencia ficción animada para estadounidense creada por Craig Silverstein"+
+            ". La serie está basada en una serie de cuentos de Ken Liu en The Apocalypse Triptych."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.amcstudiosinternational.com/catalog/17874");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Ver Pantheon en AMC"
+        }
+    </script>
+    <script>
+        function LadyBug(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Miraculous: Las aventuras de Ladybug"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","ladybug.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="En París, Marinette y Adrien parecen estudiantes normales. Sin embargo, ellos son los elegidos para salvar a los habitantes del mal."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.netflix.com/co/title/80164216?source=35");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Ver Las aventuras de Ladybug de Netflix"
+        }
+    </script>
+    <script>
+        function Doh(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="The Simpsons"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","simpsons.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="La comedia de dibujos animados se centra en una familia que vive en la ciudad de Springfield."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.disneyplus.com/series/the-simpsons/3ZoBZ52QHb4x?distributionPartner=google");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Ver Los simpsons en Disney+"
+        }
+    </script>
+    <script>
+        function Arcane(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Arcane"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","arcane.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Con las dispares ciudades de Piltover y Zaun como telón de fondo, dos hermanas luchan en bandos opuestos de una guerra entre tecnologías mágicas y creencias enfrentadas."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.netflix.com/co/title/81435684?source=35");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Ver Arcane en Netflix"
+        }
+    </script>
+    <script>
+        function Owl(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="The owl house"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","theOwlHouse.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Luz, una adolescente segura de sí misma, descubre la entrada a un reino mágino, donde se hace amiga de Eda, una bruja rebelde, y de King, un guerrero diminuto. A pesar de no tener poder, Luz se convierte en la aprendiz de Eda para ser una bruja."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.disneyplus.com/series/the-owl-house/4cOTrEy0YyaX?distributionPartner=google");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Ver The Owl House en Disney+"
+        }
+    </script>
+    <script>
+    function DOTA(){
+        var titulo=document.getElementById("tituloCard");
+        titulo.innerHTML="DOTA: Sangre de dragón"
+        var imagen=document.getElementById("imagen");
+        imagen.setAttribute("src","dota.jpg" )
+        imagen.setAttribute("width","450rem")
+        imagen.setAttribute("height","530rem");
+        imagen.setAttribute("id","imagen");
+        var texto=document.getElementById("texto");
+        texto.innerHTML="El renombrado caballero dragón Davion se ve envuelto en eventos mucho más grandes de lo que jamás hubiera imaginado."
+        var link=document.getElementById("link");
+        link.setAttribute("href","https://www.netflix.com/co/title/80994336?source=35");
+        link.setAttribute("class","card-link");
+        link.setAttribute("id","link");
+        link.innerHTML="Ver Dota en Netflix"
+    }
+</script>
+    <script>
+        var promedio=document.getElementById("1");
+        promedio.innerHTML="6.125"
+</script>
+</body>
+</html> 
