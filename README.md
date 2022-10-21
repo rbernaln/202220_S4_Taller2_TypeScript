@@ -1,4 +1,4 @@
-# 202220_S4_Taller2_TypeScript-
+# 202220_S4_Taller2_TypeScript
 
 - Rafael Bernal Naranjo
 - 202010644
